@@ -31,7 +31,8 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 20),
                 _recentEvents(),
                 SizedBox(height: 30),
-                _recentIncidents()
+                _recentIncidents(),
+                SizedBox(height: 50),
               ],
             ),
           ),
@@ -109,8 +110,8 @@ class _HomePageState extends State<HomePage> {
         Container(
           height: 220,
           child: ListView(
-            // This next line does the trick.
             scrollDirection: Axis.horizontal,
+            physics: BouncingScrollPhysics(),
             children: events
                 .map<Widget>((event) => EventPreview(event: event))
                 .toList(),
@@ -138,8 +139,8 @@ class _HomePageState extends State<HomePage> {
         Container(
           height: 220,
           child: ListView(
-            // This next line does the trick.
             scrollDirection: Axis.horizontal,
+            physics: BouncingScrollPhysics(),
             children: <Widget>[
               IncidentPreview(
                 image: 'images/1.jpeg',

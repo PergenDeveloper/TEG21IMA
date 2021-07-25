@@ -44,7 +44,7 @@ class _SignupPageState extends State<SignupPage> {
                 _passwordField(),
                 SizedBox(height: 20),
                 _signupButton(),
-                SizedBox(height: 50),
+                SizedBox(height: 30),
                 Row(
                   children: [
                     Text(
@@ -65,7 +65,7 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),

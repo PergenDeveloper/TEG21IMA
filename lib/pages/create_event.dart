@@ -95,7 +95,7 @@ class _CreateEventState extends State<CreateEvent> {
                 _maxPeopleField(),
                 SizedBox(height: 20),
                 _dateField(),
-                SizedBox(height: 60),
+                SizedBox(height: 100),
               ],
             ),
           ),
