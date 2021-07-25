@@ -285,6 +285,30 @@ class _SignupPageState extends State<SignupPage> {
   }
 
   void _navigateToHome() async {
+    if (name == null || name!.isEmpty) {
+      // Show dialog error title
+      showErrorMessage(context, "El campo nombre es obligatorio");
+      return;
+    }
+
+    if (phone == null || phone!.isEmpty) {
+      // Show dialog error description
+      showErrorMessage(context, "El campo teléfono es obligatorio");
+      return;
+    }
+
+    if (email == null || email!.isEmpty) {
+      // Show dialog error city
+      showErrorMessage(context, "El campo Correo electrónico es obligatorio");
+      return;
+    }
+
+    if (password == null || password!.isEmpty) {
+      // Show dialog error maxPeople
+      showErrorMessage(context, "El campo contraseña es obligatorio");
+      return;
+    }
+
     EasyLoading.show(maskType: EasyLoadingMaskType.custom);
     final user = UserModel(
       name: this.name,
